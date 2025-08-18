@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SAFENET-VPN — Руководства и инструкции по VPN</title>
+    <description>Полные руководства по настройке VPN на всех устройствах, стримингу через VPN, решению проблем и диагностике. Практические советы от экспертов SAFENET-VPN.</description>
+    <link>https://internet-security-hub.github.io/</link>
+    <atom:link href="https://internet-security-hub.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <language>ru-RU</language>
+    <lastBuildDate>Thu, 15 Aug 2025 19:20:00 +0000</lastBuildDate>
+    <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+    <ttl>1440</ttl>
+    <generator>SAFENET-VPN Content Team</generator>
+    <managingEditor>support@safenet-vpn.com (SAFENET-VPN Support)</managingEditor>
+    <webMaster>support@safenet-vpn.com (SAFENET-VPN Support)</webMaster>
+    <copyright>© 2025 SAFENET-VPN. Все права защищены.</copyright>
+    <image>
+      <url>https://internet-security-hub.github.io/images/og-safenet.jpg</url>
+      <title>SAFENET-VPN</title>
+      <link>https://internet-security-hub.github.io/</link>
+      <width>1200</width>
+      <height>630</height>
+    </image>
+
+    <!-- НОВЫЕ СТАТЬИ (добавлены 17 августа 2025) -->
+    
+    <item>
+  <title>О проекте SAFENET-VPN — экспертная команда и миссия 2025</title>
+  <link>https://internet-security-hub.github.io/about/</link>
+  <description>Узнайте о команде экспертов с 8-летним опытом, уникальных контентных кластерах и революционных решениях для банков и бизнеса.</description>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <guid>https://internet-security-hub.github.io/about/</guid>
+</item>
+
+    <item>
+  <title>Пользовательское соглашение SAFENET-VPN — условия использования сервиса 2025</title>
+  <description>Официальное Пользовательское соглашение SAFENET-VPN. Правила использования VPN-сервиса, права и обязанности сторон, условия подписки и оплаты, политика допустимого использования.</description>
+  <link>https://internet-security-hub.github.io/legal/terms/</link>
+  <guid>https://internet-security-hub.github.io/legal/terms/</guid>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <category>Правовая информация</category>
+</item>
+
+    <item>
+  <title>Политика конфиденциальности — строгая политика отсутствия логов 2025</title>
+  <description>Официальная Политика конфиденциальности SAFENET-VPN. Строгая политика отсутствия логов, защита анонимности, соответствие GDPR и ФЗ-152. Ваша конфиденциальность — наш приоритет.</description>
+  <link>https://internet-security-hub.github.io/legal/privacy/</link>
+  <guid>https://internet-security-hub.github.io/legal/privacy/</guid>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <category>Правовая информация</category>
+</item>
+
+    <item>
+  <title>VPN для macOS — установка на MacBook, iMac с Apple Silicon M1/M2/M3 — 2025</title>
+  <description>Исчерпывающее руководство по установке VPN на macOS с поддержкой Apple Silicon. WireGuard, OpenVPN (Tunnelblick), встроенный IKEv2, решение проблем производительности и совместимости.</description>
+  <link>https://internet-security-hub.github.io/devices/macos/</link>
+  <guid>https://internet-security-hub.github.io/devices/macos/</guid>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <category>Устройства</category>
+</item>
+
+    <item>
+  <title>VPN медленно работает — как увеличить скорость подключения 2025</title>
+  <description>VPN тормозит интернет? Комплексное руководство по диагностике и решению проблем с медленной скоростью VPN. Оптимизация протоколов, серверов, настроек для максимальной производительности.</description>
+  <link>https://internet-security-hub.github.io/troubleshooting/slow-speed/</link>
+  <guid>https://internet-security-hub.github.io/troubleshooting/slow-speed/</guid>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <category>Решение проблем</category>
+</item>
+
+    <item>
+  <title>VPN для Яндекс.Станции и умного дома — Алиса за границей 2025</title>
+  <description>Как настроить VPN для работы Яндекс.Станции, Алисы, умных устройств за границей. VPN на роутере для Яндекс-экосистемы, решение проблем с геоблокировками российских сервисов.</description>
+  <link>https://internet-security-hub.github.io/devices/yandex-ecosystem/</link>
+  <guid>https://internet-security-hub.github.io/devices/yandex-ecosystem/</guid>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <category>Устройства</category>
+</item>
+
+    <item>
+  <title>Обход DPI российских провайдеров — актуальные методы 2025</title>
+  <description>Работающие способы обхода глубокой инспекции пакетов российских интернет-провайдеров. Obfs4, WireGuard obfuscation, Shadowsocks — проверенные решения от экспертов.</description>
+  <link>https://internet-security-hub.github.io/guide/dpi-bypass-2025/</link>
+  <guid>https://internet-security-hub.github.io/guide/dpi-bypass-2025/</guid>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <category>Технические руководства</category>
+</item>
+
+    <item>
+  <title>VPN для фриланса — Upwork, Fiverr, безопасность удаленной работы 2025</title>
+  <description>Полное руководство по VPN для фрилансеров: доступ к международным платформам, защита данных клиентов, смена геолокации, налоговые аспекты. Лучшие практики безопасной удаленной работы.</description>
+  <link>https://internet-security-hub.github.io/business/freelance/</link>
+  <guid>https://internet-security-hub.github.io/business/freelance/</guid>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <category>Бизнес-применение</category>
+</item>
+    
+    <item>
+  <title>Тест VPN для банков — комплексная диагностика готовности 2025</title>
+  <description>Бесплатный тест VPN для банковских приложений за 2 минуты. Проверка IP, DNS-утечек, WebRTC, геолокации для Сбербанка, Тинькофф, ВТБ, Альфа-Банка с персональными рекомендациями.</description>
+  <link>https://internet-security-hub.github.io/diagnostics/banking-check/</link>
+  <guid>https://internet-security-hub.github.io/diagnostics/banking-check/</guid>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <category>Диагностика VPN</category>
+</item>
+
+    <item>
+  <title>ВТБ через VPN — настройка для государственного банка 2025</title>
+  <description>Как пользоваться ВТБ Онлайн через VPN за границей. Особенности государственного банка, обход блокировок, настройка мобильного приложения и веб-версии. Проверенные решения.</description>
+  <link>https://internet-security-hub.github.io/banking/vtb/</link>
+  <guid>https://internet-security-hub.github.io/banking/vtb/</guid>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <category>Банковские приложения</category>
+</item>
+
+    <item>
+  <title>Альфа-Банк через VPN — самый VPN-дружелюбный банк России 2025</title>
+  <description>Официальная программа Альфа-Зарубежье, минимальные блокировки VPN, простая настройка. Лучший выбор для жизни за границей среди российских банков.</description>
+  <link>https://internet-security-hub.github.io/banking/alfabank/</link>
+  <guid>https://internet-security-hub.github.io/banking/alfabank/</guid>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <category>Банковские приложения</category>
+</item>
+
+    <item>
+  <title>Тинькофф через VPN — рабочая инструкция 2025 (Android/iPhone)</title>
+  <description>Настройка Тинькофф Банка через VPN за границей. Умеренная защита, работающие push-уведомления, пошаговое руководство. Проще чем Сбербанк.</description>
+  <link>https://internet-security-hub.github.io/banking/tinkoff/</link>
+  <guid>https://internet-security-hub.github.io/banking/tinkoff/</guid>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <category>Банковские приложения</category>
+</item>
+    
+    <item>
+  <title>Сбербанк через VPN — работающая инструкция 2025 (Android/iPhone)</title>
+  <description>Пошаговое руководство по обходу блокировок Сбербанка через VPN. Настройка обфускации, проверка утечек, решение проблем. Два проверенных VPN-сервиса.</description>
+  <link>https://internet-security-hub.github.io/banking/sberbank/</link>
+  <guid>https://internet-security-hub.github.io/banking/sberbank/</guid>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <category>Банковские приложения</category>
+</item>
+
+    <item>
+  <title>VPN для российских банковских приложений — работающие решения 2025</title>
+  <description>Настройка Сбербанк Онлайн, Тинькофф, Альфа-Банк через VPN за границей. Обход блокировок банковских приложений с поддержкой двух проверенных VPN сервисов.</description>
+  <link>https://internet-security-hub.github.io/banking/</link>
+  <guid>https://internet-security-hub.github.io/banking/</guid>
+  <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <category>Банковские приложения</category>
+</item>
+    <item>
+      <title>VPN для игр и консолей — PlayStation, Xbox, Nintendo Switch</title>
+      <description>VPN для игр: PlayStation 4/5, Xbox One/Series, Nintendo Switch, Steam Deck. Снижение пинга, доступ к региональным играм, защита от DDoS. Настройка через роутер, обход геоблокировок игровых сервисов.</description>
+      <link>https://internet-security-hub.github.io/devices/gaming/</link>
+      <guid>https://internet-security-hub.github.io/devices/gaming/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Устройства</category>
+    </item>
+
+    <item>
+      <title>VPN на роутере — настройка Asus, Keenetic, OpenWrt, MikroTik</title>
+      <description>Как настроить VPN на роутере: Asus (AsusWRT/Merlin), Keenetic, OpenWrt, MikroTik, TP-Link. Импорт OpenVPN/WireGuard профилей, защита всей домашней сети, настройка для Smart TV и игровых консолей.</description>
+      <link>https://internet-security-hub.github.io/devices/routers/</link>
+      <guid>https://internet-security-hub.github.io/devices/routers/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Устройства</category>
+    </item>
+
+    <item>
+      <title>VPN для планшетов — Android и iPad: настройка и приложения</title>
+      <description>Как настроить VPN на планшете: Android планшеты (WireGuard, OpenVPN), iPad (iOS приложения, профили). Автоподключение, экономия батареи, решение проблем с планшетными приложениями.</description>
+      <link>https://internet-security-hub.github.io/devices/tablets/</link>
+      <guid>https://internet-security-hub.github.io/devices/tablets/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Устройства</category>
+    </item>
+
+    <item>
+      <title>Сравнение VPN сервисов — методология и критерии оценки</title>
+      <description>Как правильно сравнивать VPN провайдеров: критерии безопасности, скорости, приватности, цены. Методология объективной оценки VPN сервисов, на что обращать внимание при выборе.</description>
+      <link>https://internet-security-hub.github.io/comparisons/</link>
+      <guid>https://internet-security-hub.github.io/comparisons/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Сравнения</category>
+    </item>
+
+    <item>
+      <title>Протоколы VPN — WireGuard, OpenVPN, IKEv2: сравнение и выбор</title>
+      <description>Подробное сравнение VPN протоколов: WireGuard, OpenVPN, IKEv2, L2TP/IPsec. Скорость, безопасность, совместимость с устройствами. Какой протокол выбрать для Windows, Android, iOS.</description>
+      <link>https://internet-security-hub.github.io/guide/protocols/</link>
+      <guid>https://internet-security-hub.github.io/guide/protocols/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Руководства</category>
+    </item>
+
+    <!-- ПРЕДЫДУЩИЕ СТАТЬИ (созданы ранее) -->
+    <item>
+      <title>Диагностика VPN — проверка IP, DNS, скорости, безопасности</title>
+      <description>Центр диагностики VPN: онлайн инструменты для проверки IP адреса, DNS утечек, WebRTC, тест скорости. Убедитесь, что ваш VPN работает правильно и защищает конфиденциальность.</description>
+      <link>https://internet-security-hub.github.io/diagnostics/</link>
+      <guid>https://internet-security-hub.github.io/diagnostics/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Диагностика</category>
+    </item>
+
+    <item>
+      <title>Проверка IP адреса и DNS утечек — тест VPN на безопасность</title>
+      <description>Онлайн проверка IP адреса, DNS и WebRTC утечек. Убедитесь, что ваш VPN работает правильно и защищает конфиденциальность. Пошаговые инструкции по устранению утечек.</description>
+      <link>https://internet-security-hub.github.io/diagnostics/ip-check/</link>
+      <guid>https://internet-security-hub.github.io/diagnostics/ip-check/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Диагностика</category>
+    </item>
+
+    <item>
+      <title>Решение проблем с VPN — диагностика, исправление, поддержка 24/7</title>
+      <description>Центр устранения неполадок VPN: не подключается, медленная скорость, обрывы, ошибки приложений, DNS утечки. Быстрая диагностика, пошаговые решения, техподдержка 24/7.</description>
+      <link>https://internet-security-hub.github.io/troubleshooting/</link>
+      <guid>https://internet-security-hub.github.io/troubleshooting/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Решение проблем</category>
+    </item>
+
+    <item>
+      <title>VPN для Smart TV — Samsung, LG, Android TV, Apple TV</title>
+      <description>Как подключить VPN на Smart TV: через роутер (универсально), Android TV (приложение), раздачу с ПК/Mac. Samsung Tizen, LG webOS, Sony — пошаговые инструкции, скорость для 4K.</description>
+      <link>https://internet-security-hub.github.io/devices/smart-tv/</link>
+      <guid>https://internet-security-hub.github.io/devices/smart-tv/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Устройства</category>
+    </item>
+
+    <item>
+      <title>VPN для Netflix — как смотреть и какую страну выбрать</title>
+      <description>Полное руководство по Netflix через VPN: выбор локации (US/UK/Canada/Japan), устранение ошибки прокси M7111‑1331‑5059, скорость для HD/4K, советы по устройствам.</description>
+      <link>https://internet-security-hub.github.io/streaming/netflix/</link>
+      <guid>https://internet-security-hub.github.io/streaming/netflix/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Стриминг</category>
+    </item>
+
+    <item>
+      <title>VPN для Windows 10/11 — установка и настройка</title>
+      <description>Пошаговая инструкция для Windows 10 и Windows 11: встроенный клиент (IKEv2/L2TP), WireGuard и OpenVPN. Разбираем быстрый старт, безопасность, автозапуск и устранение проблем.</description>
+      <link>https://internet-security-hub.github.io/devices/windows/</link>
+      <guid>https://internet-security-hub.github.io/devices/windows/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Устройства</category>
+    </item>
+
+    <item>
+      <title>Полное руководство по VPN — от основ до экспертного уровня</title>
+      <description>Изучите VPN с нуля: что такое VPN, как работает, какой выбрать, протоколы безопасности, юрисдикции. Персонализированные пути обучения для новичков и экспертов с практическими примерами.</description>
+      <link>https://internet-security-hub.github.io/guide/</link>
+      <guid>https://internet-security-hub.github.io/guide/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Руководства</category>
+    </item>
+
+    <item>
+      <title>VPN для стриминга — Netflix, YouTube, Disney+ без ограничений</title>
+      <description>Смотрите Netflix, YouTube, Disney+, Hulu через VPN без блокировок. Выбор локации, обход гео-ограничений, оптимизация для 4K/HD. Пошаговые инструкции для всех стриминговых сервисов.</description>
+      <link>https://internet-security-hub.github.io/streaming/</link>
+      <guid>https://internet-security-hub.github.io/streaming/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Стриминг</category>
+    </item>
+
+    <item>
+      <title>VPN для всех устройств — настройка на Windows, Android, iPhone, Smart TV</title>
+      <description>Пошаговые инструкции по настройке VPN на любых устройствах: Windows 10/11, Android, iPhone/iPad, Smart TV, роутер. WireGuard и OpenVPN конфигурации, решение проблем подключения.</description>
+      <link>https://internet-security-hub.github.io/devices/</link>
+      <guid>https://internet-security-hub.github.io/devices/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Устройства</category>
+    </item>
+
+    <item>
+      <title>VPN не работает — что делать: диагностика и решение проблем</title>
+      <description>Пошаговая диагностика и устранение проблем с VPN: не подключается, медленно работает, ошибки авторизации. Быстрые решения для Windows, Android, iOS, роутеров. Когда обращаться в поддержку.</description>
+      <link>https://internet-security-hub.github.io/troubleshooting/not-working/</link>
+      <guid>https://internet-security-hub.github.io/troubleshooting/not-working/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Решение проблем</category>
+    </item>
+
+    <item>
+      <title>VPN для YouTube — как смотреть без замедлений и блокировок</title>
+      <description>Обход замедлений YouTube в России, выбор оптимальных серверов, настройка для максимальной скорости. Решение проблем с буферизацией, выбор качества, VPN для YouTube Premium.</description>
+      <link>https://internet-security-hub.github.io/streaming/youtube/</link>
+      <guid>https://internet-security-hub.github.io/streaming/youtube/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Стриминг</category>
+    </item>
+
+    <item>
+      <title>VPN для iPhone и iPad — настройка iOS, приложения, On Demand</title>
+      <description>Полная инструкция по VPN для iOS: App Store приложения, импорт конфигураций, On Demand подключение, Siri Shortcuts, Personal VPN, решение проблем с iPhone и iPad.</description>
+      <link>https://internet-security-hub.github.io/devices/ios/</link>
+      <guid>https://internet-security-hub.github.io/devices/ios/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Устройства</category>
+    </item>
+
+    <item>
+      <title>VPN для Android — настройка, приложения, автоподключение</title>
+      <description>Подробная инструкция по настройке VPN на Android: лучшие приложения из Google Play, импорт конфигураций WireGuard и OpenVPN, автоподключение по Wi-Fi, Always-on VPN, решение проблем.</description>
+      <link>https://internet-security-hub.github.io/devices/android/</link>
+      <guid>https://internet-security-hub.github.io/devices/android/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Устройства</category>
+    </item>
+
+    <item>
+      <title>Как выбрать надежный VPN — критерии безопасности и чек-лист</title>
+      <description>Полное руководство по выбору VPN провайдера: критерии безопасности, юрисдикции, протоколы, логирование, скорость. Чек-лист для оценки любого VPN сервиса, на что обращать внимание.</description>
+      <link>https://internet-security-hub.github.io/guide/selection-criteria/</link>
+      <guid>https://internet-security-hub.github.io/guide/selection-criteria/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Руководства</category>
+    </item>
+
+    <item>
+      <title>Что такое VPN простыми словами — принципы работы и применение</title>
+      <description>VPN для начинающих: что это такое, как работает туннелирование и шифрование, зачем нужен VPN, основные применения, плюсы и минусы, законность использования. Простым языком без технических терминов.</description>
+      <link>https://internet-security-hub.github.io/guide/vpn-fundamentals/</link>
+      <guid>https://internet-security-hub.github.io/guide/vpn-fundamentals/</guid>
+      <pubDate>Sun, 18 Aug 2025 09:00:00 GMT</pubDate>
+      <category>Руководства</category>
+    </item>
+
+  </channel>
+</rss>

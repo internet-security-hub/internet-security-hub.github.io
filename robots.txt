@@ -1,0 +1,8 @@
+﻿User-agent: *
+Allow: /
+
+Host: https://internet-security-hub.github.io
+Sitemap: https://internet-security-hub.github.io/sitemap.xml
+
+# RSS Feed доступен по адресу:
+# https://internet-security-hub.github.io/rss.xml
