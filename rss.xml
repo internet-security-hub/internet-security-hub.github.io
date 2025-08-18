@@ -24,6 +24,15 @@
     <!-- **НОВЫЕ СТАТЬИ (добавлены 18 августа 2025)** -->
 
     <item>
+  <title>Тест скорости VPN — как проверить и увеличить скорость подключения 2025</title>
+  <link>https://internet-security-hub.github.io/diagnostics/speed-test/</link>
+  <description>Полное руководство по тестированию скорости VPN: проверка пинга, загрузки, отдачи. Эталонные значения для стриминга и игр, 7 способов оптимизации, диагностика проблем. Экспертные советы 2025.</description>
+  <pubDate>Mon, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <guid isPermaLink="true">https://internet-security-hub.github.io/diagnostics/speed-test/</guid>
+  <category>Диагностика VPN</category>
+</item>
+
+    <item>
   <title>Безопасность VPN и защита от утечек — исчерпывающее руководство 2025</title>
   <link>https://internet-security-hub.github.io/guide/security/</link>
   <description>Полное руководство по безопасности VPN: защита от утечек DNS/WebRTC/IPv6, настройка Kill Switch, выбор протоколов шифрования, no-logs политика, тестирование безопасности. Экспертные советы 2025.</description>
@@ -227,6 +236,7 @@
 
   </channel>
 </rss>
+
 
 
 
