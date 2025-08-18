@@ -24,6 +24,15 @@
     <!-- **НОВЫЕ СТАТЬИ (добавлены 18 августа 2025)** -->
 
     <item>
+  <title>VPN-юрисдикции и законы 2025 — как выбор страны влияет на вашу приватность</title>
+  <link>https://internet-security-hub.github.io/guide/jurisdictions/</link>
+  <description>Полное руководство по VPN-юрисдикциям: как законы страны регистрации и расположения серверов влияют на вашу конфиденциальность и безопасность данных. Альянсы 5/9/14 глаз, законы о логировании, и выбор надежного VPN.</description>
+  <pubDate>Mon, 18 Aug 2025 14:00:00 GMT</pubDate>
+  <guid isPermaLink="true">https://internet-security-hub.github.io/guide/jurisdictions/</guid>
+  <category>Руководства</category>
+</item>
+
+    <item>
   <title>VPN для удаленной работы — корпоративная безопасность и доступ к ресурсам 2025</title>
   <link>https://internet-security-hub.github.io/business/remote-work/</link>
   <description>Полное руководство по VPN для корпоративной удаленной работы: защита данных, доступ к серверам, банковские операции, соблюдение требований безопасности. Решения для IT-отделов и сотрудников.</description>
@@ -272,6 +281,7 @@
 
   </channel>
 </rss>
+
 
 
 
