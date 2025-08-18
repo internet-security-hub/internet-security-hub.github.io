@@ -24,6 +24,15 @@
     <!-- **НОВЫЕ СТАТЬИ (добавлены 18 августа 2025)** -->
 
     <item>
+  <title>Обход блокировок VoIP в России 2025 — продвинутые методы и технологии</title>
+  <link>https://internet-security-hub.github.io/guide/voip-bypass-russia/</link>
+  <description>Продвинутые технические методы обхода VoIP-блокировок: обфускация протоколов, настройка собственных серверов, оптимизация сети. Руководство для экспертов и системных администраторов.</description>
+  <pubDate>Mon, 18 Aug 2025 11:00:00 GMT</pubDate>
+  <guid isPermaLink="true">https://internet-security-hub.github.io/guide/voip-bypass-russia/</guid>
+  <category>Руководства</category>
+</item>
+
+    <item>
   <title>Звонки в Telegram и WhatsApp не работают в России 2025 — решения через VPN</title>
   <link>https://internet-security-hub.github.io/guide/telegram-whatsapp-calls/</link>
   <description>Почему звонки в Telegram и WhatsApp заблокированы в России и как VPN помогает восстановить связь. Пошаговые инструкции, диагностика проблем, альтернативы.</description>
@@ -254,6 +263,7 @@
 
   </channel>
 </rss>
+
 
 
 
