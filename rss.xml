@@ -24,6 +24,15 @@
     <!-- **НОВЫЕ СТАТЬИ (добавлены 18 августа 2025)** -->
 
     <item>
+  <title>Безопасность VPN и защита от утечек — исчерпывающее руководство 2025</title>
+  <link>https://internet-security-hub.github.io/guide/security/</link>
+  <description>Полное руководство по безопасности VPN: защита от утечек DNS/WebRTC/IPv6, настройка Kill Switch, выбор протоколов шифрования, no-logs политика, тестирование безопасности. Экспертные советы 2025.</description>
+  <pubDate>Mon, 18 Aug 2025 09:00:00 GMT</pubDate>
+  <guid isPermaLink="true">https://internet-security-hub.github.io/guide/security/</guid>
+  <category>Руководства</category>
+</item>
+
+    <item>
   <title>Disney+ через VPN в России — как смотреть в 2025 году</title>
   <link>https://internet-security-hub.github.io/streaming/disney-plus/</link>
   <description>Полное руководство по Disney+ через VPN в России 2025: лучшие страны, настройка на всех устройствах, обход ошибок Proxy detected, цены подписки. Работающие решения.</description>
@@ -218,5 +227,6 @@
 
   </channel>
 </rss>
+
 
 
