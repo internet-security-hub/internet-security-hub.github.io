@@ -24,6 +24,15 @@
     <!-- **НОВЫЕ СТАТЬИ (добавлены 18 августа 2025)** -->
 
     <item>
+  <title>VPN для удаленной работы — корпоративная безопасность и доступ к ресурсам 2025</title>
+  <link>https://internet-security-hub.github.io/business/remote-work/</link>
+  <description>Полное руководство по VPN для корпоративной удаленной работы: защита данных, доступ к серверам, банковские операции, соблюдение требований безопасности. Решения для IT-отделов и сотрудников.</description>
+  <pubDate>Mon, 18 Aug 2025 12:00:00 GMT</pubDate>
+  <guid isPermaLink="true">https://internet-security-hub.github.io/business/remote-work/</guid>
+  <category>Бизнес</category>
+</item>
+
+    <item>
   <title>Обход блокировок VoIP в России 2025 — продвинутые методы и технологии</title>
   <link>https://internet-security-hub.github.io/guide/voip-bypass-russia/</link>
   <description>Продвинутые технические методы обхода VoIP-блокировок: обфускация протоколов, настройка собственных серверов, оптимизация сети. Руководство для экспертов и системных администраторов.</description>
@@ -263,6 +272,7 @@
 
   </channel>
 </rss>
+
 
 
 
