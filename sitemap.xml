@@ -346,7 +346,15 @@
   <priority>0.9</priority>
 </url>
 
+  <url>
+  <loc>https://internet-security-hub.github.io/devices/windows-vpn-complete/</loc>
+  <lastmod>2025-08-18</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+
 </urlset>
+
 
 
 
