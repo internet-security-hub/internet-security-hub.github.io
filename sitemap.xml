@@ -244,3 +244,22 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+
+  <url>
+  <loc>https://internet-security-hub.github.io/streaming/youtube-access/</loc>
+  <lastmod>2025-08-18</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://internet-security-hub.github.io/troubleshooting/vpn-fix/</loc>
+  <lastmod>2025-08-18</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://internet-security-hub.github.io/guide/free-vpn-risks/</loc>
+  <lastmod>2025-08-18</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
