@@ -23,11 +23,20 @@
 
     <!-- **НОВЫЕ СТАТЬИ (добавлены 18 августа 2025)** -->
 
+    <item>
+  <title>Закон о VPN в России 2025 — можно ли пользоваться VPN, штрафы и запреты</title>
+  <link>https://internet-security-hub.github.io/legal/vpn-law-russia-2025/</link>
+  <description>Полный анализ российского законодательства о VPN: что разрешено обычным пользователям, какие штрафы предусмотрены, как избежать проблем с законом</description>
+  <pubDate>Tue, 19 Aug 2025 11:00:00 GMT</pubDate>
+  <guid isPermaLink="true">https://internet-security-hub.github.io/legal/vpn-law-russia-2025/</guid>
+  <category>Правовые вопросы</category>
+</item>
+
 <item>
   <title>Настройка VPN 2025 — как установить и настроить VPN подключение на всех устройствах</title>
   <link>https://internet-security-hub.github.io/guide/vpn-setup-configuration/</link>
   <description>Исчерпывающий гид по настройке VPN: от базовой установки до продвинутых конфигураций для максимальной безопасности и скорости</description>
-  <pubDate>Tue, 19 Aug 2025 12:00:00 GMT</pubDate>
+  <pubDate>Tue, 19 Aug 2025 11:00:00 GMT</pubDate>
   <guid isPermaLink="true">https://internet-security-hub.github.io/guide/vpn-setup-configuration/</guid>
   <category>Настройка</category>
 </item>
@@ -36,7 +45,7 @@
   <title>Настройка VPN 2025 — как установить и настроить VPN подключение на всех устройствах</title>
   <link>https://internet-security-hub.github.io/guide/vpn-setup-configuration/</link>
   <description>Исчерпывающий гид по настройке VPN: от базовой установки до продвинутых конфигураций для максимальной безопасности и скорости</description>
-  <pubDate>Tue, 19 Aug 2025 12:00:00 GMT</pubDate>
+  <pubDate>Tue, 19 Aug 2025 11:00:00 GMT</pubDate>
   <guid isPermaLink="true">https://internet-security-hub.github.io/guide/vpn-setup-configuration/</guid>
   <category>Настройка</category>
 </item>
@@ -380,6 +389,7 @@
 
   </channel>
 </rss>
+
 
 
 
