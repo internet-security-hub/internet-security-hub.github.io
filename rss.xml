@@ -24,6 +24,15 @@
     <!-- **НОВЫЕ СТАТЬИ (добавлены 18 августа 2025)** -->
 
     <item>
+  <title>Протоколы VPN 2025 — WireGuard, OpenVPN, IKEv2, L2TP сравнение и выбор</title>
+  <link>https://internet-security-hub.github.io/guide/vpn-protocols-2025/</link>
+  <description>Полное техническое руководство по современным VPN-протоколам: детальное сравнение производительности, безопасности и совместимости</description>
+  <pubDate>Tue, 19 Aug 2025 18:00:00 GMT</pubDate>
+  <guid isPermaLink="true">https://internet-security-hub.github.io/guide/vpn-protocols-2025/</guid>
+  <category>Технические руководства</category>
+</item>
+
+    <item>
   <title>Обзор популярных VPN 2025 — Radmin VPN, AdGuard VPN, Planet VPN, Proton VPN, NordVPN</title>
   <link>https://internet-security-hub.github.io/brands/popular-vpn-review/</link>
   <description>Честные обзоры популярных VPN-сервисов с реальными тестами скорости, безопасности и функциональности в российских условиях</description>
@@ -398,6 +407,7 @@
 
   </channel>
 </rss>
+
 
 
 
