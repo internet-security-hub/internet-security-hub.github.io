@@ -1,456 +1,774 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <title>VPN для стриминга — Netflix, YouTube, Disney+ без ограничений | SAFENET‑VPN</title>
-  <meta name="description" content="Смотрите Netflix, YouTube, Disney+, Hulu через VPN без блокировок. Выбор локации, обход гео-ограничений, оптимизация для 4K/HD. Пошаговые инструкции для всех стриминговых сервисов.">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="canonical" href="https://internet-security-hub.github.io/streaming/">
-  <meta name="robots" content="index,follow">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="ru_RU">
-  <meta property="og:title" content="VPN для стриминга — Netflix, YouTube, Disney+ без ограничений">
-  <meta property="og:description" content="Полное руководство по стримингу через VPN: Netflix, YouTube, Disney+. Выбор локации, обход блокировок, 4K качество без буферизации.">
-  <meta property="og:url" content="https://internet-security-hub.github.io/streaming/">
-  <meta property="og:image" content="https://internet-security-hub.github.io/images/og-safenet.jpg">
-  <meta property="og:site_name" content="SAFENET-VPN">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="VPN для стриминга — Netflix, YouTube, Disney+ без ограничений">
-  <meta name="twitter:description" content="Смотрите Netflix, YouTube, Disney+ через VPN. Обход блокировок, выбор серверов, 4K оптимизация.">
-  <meta name="twitter:image" content="https://internet-security-hub.github.io/images/og-safenet.jpg">
-
-  <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-    <!-- RSS лента — ДОБАВИТЬ СЮДА -->
-  <link rel="alternate" type="application/rss+xml" title="SAFENET-VPN — Руководства по VPN" href="/rss.xml">
-
-  <style>
-    :root{
-      --bg:#0b1020; --card:#11183a; --text:#e9eefc; --muted:#aab3d9; --accent:#4da3ff; --accent-2:#7de2d1; --ok:#29c773; --warn:#ffb020; --err:#ff5c5c;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1050px;margin:0 auto;padding:20px}
-    .breadcrumbs{font-size:.9rem;color:var(--muted);margin:12px 0}
-    .breadcrumbs a{color:var(--muted)}
-    .hero{background:linear-gradient(135deg,rgba(77,163,255,.15),rgba(125,226,209,.12));border:1px solid rgba(125,226,209,.25);border-radius:16px;padding:28px;margin:16px 0}
-    .hero h1{margin:0 0 10px 0;font-size:2rem}
-    .hero p{margin:0 0 16px 0;color:var(--muted)}
-    .cta-row{display:flex;flex-wrap:wrap;gap:10px}
-    .btn{display:inline-block;background:var(--accent);color:#061229;padding:12px 16px;border-radius:10px;font-weight:700}
-    .btn.secondary{background:transparent;border:1px solid var(--accent);color:var(--text)}
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:24px}
-    @media(max-width:980px){.grid{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:18px}
-    h2{margin-top:28px}
-    h3{margin-top:20px}
-    .badge{display:inline-block;background:rgba(77,163,255,.15);border:1px solid rgba(77,163,255,.4);color:#cfe5ff;padding:2px 8px;border-radius:999px;font-size:.8rem}
-    .note{border-left:3px solid var(--accent-2);padding-left:12px;color:#cfe5ff}
-    .warn{border-left:3px solid var(--warn);padding-left:12px}
-    .ok{color:var(--ok);font-weight:600}
-    ul.check>li::marker{content:"✔ ";color:var(--ok)}
-    .also ul{columns:2;gap:24px}
-    @media(max-width:680px){.also ul{columns:1}}
-    .muted{color:var(--muted)}
-    .footer-cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-    .small{font-size:.9rem}
-    .service-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:20px 0}
-    .service-card{border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:20px;background:rgba(17,24,58,.3);transition:border-color .2s;position:relative}
-    .service-card:hover{border-color:var(--accent)}
-    .service-card h3{margin:0 0 8px 0;color:var(--accent)}
-    .service-card .desc{color:var(--muted);font-size:.9rem;margin:8px 0 12px 0}
-    .service-card .meta{font-size:.8rem;color:var(--muted);margin:8px 0;display:flex;flex-wrap:wrap;gap:8px}
-    .service-card .meta span{background:rgba(77,163,255,.1);padding:2px 6px;border-radius:4px}
-    .btn-card{display:inline-block;background:var(--accent);color:#061229;padding:8px 14px;border-radius:8px;font-size:.9rem;font-weight:600}
-    .btn-card.secondary{background:transparent;border:1px solid var(--muted);color:var(--muted)}
-    .popular{background:linear-gradient(135deg,rgba(41,199,115,.1),rgba(125,226,209,.08));border-color:var(--ok)}
-    .popular::before{content:"🔥 Популярно";position:absolute;top:-8px;right:12px;background:var(--ok);color:#061229;font-size:.75rem;padding:2px 8px;border-radius:999px;font-weight:600}
-    .coming-soon{opacity:.7;border-style:dashed}
-    .coming-soon .btn-card{background:var(--muted);opacity:.7}
-    .countries{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:16px 0}
-    .country{border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:12px;text-align:center;font-size:.9rem}
-    .country .flag{font-size:1.2rem;margin-bottom:4px}
-    .tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
-    @media(max-width:640px){.tips-grid{grid-template-columns:1fr}}
-    .tip-card{border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px;background:rgba(17,24,58,.35)}
-  </style>
-
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],
-      k.async=1;k.src=r;a.parentNode.insertBefore(k,a)
-    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    ym(103602117, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/103602117" style="position:absolute; left:-9999px;" alt=""></div></noscript>
-  <!-- /Yandex.Metrika -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN для стриминга в России 2025: YouTube, Netflix, Discord и все заблокированные сервисы</title>
+    <meta name="description" content="Полный гид по обходу блокировок стриминговых сервисов в России 2025: YouTube, Netflix, Disney+, Discord, Telegram, TikTok. VPN, Amnezia, GoodbyeDPI - все рабочие способы.">
+    <meta name="keywords" content="vpn для стриминга, обход блокировок видео, vpn netflix youtube discord, стриминг россия 2025, vpn для youtube, vpn для netflix, vpn для discord, vpn для telegram, amnezia vpn стриминг, goodbyedpi видео">
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #00ff88;
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+        }
+        
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+        }
+        
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: #000;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: #00cc6a;
+            transform: scale(1.05);
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, var(--bg-card) 0%, #252525 100%);
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.1);
+        }
+        
+        .method-card {
+            background: var(--bg-card);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .comparison-table {
+            background: var(--bg-card);
+            border: 1px solid #333;
+        }
+        
+        .comparison-table th {
+            background: #2a2a2a;
+            color: var(--primary-color);
+        }
+        
+        .comparison-table td {
+            border-bottom: 1px solid #333;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23333" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.1;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a href="/">Главная</a> › <span>Стриминг</span>
-    </nav>
-
-    <section class="hero">
-      <span class="badge">Видео без границ</span>
-      <h1>VPN для стриминга — Netflix, YouTube, Disney+ без ограничений</h1>
-      <p>Получите доступ к полным библиотекам стриминговых сервисов по всему миру. Смотрите Netflix США, YouTube без замедлений, Disney+ и спортивные трансляции в максимальном качестве через надежный VPN.</p>
-      <div class="cta-row">
-        <a class="btn" href="https://t.me/SafeNetVpn_bot?start=afrrica" onclick="ym(103602117,'reachGoal','streaming_main_cta')" rel="noopener nofollow">Получить доступ к мировому контенту</a>
-        <a class="btn secondary" href="#services-list" onclick="ym(103602117,'reachGoal','streaming_browse_start')">Выбрать сервис</a>
-      </div>
-      <p class="muted small">SAFENET‑VPN: оптимизация для стриминга • 4K качество • От 126₽/мес (первый месяц 107₽)</p>
+    <!-- Hero Section -->
+    <section class="hero-section py-16 px-4 relative">
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                VPN для стриминга в России 2025
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                YouTube, Netflix, Disney+, Discord, Telegram, TikTok — смотрите всё без ограничений
+            </p>
+            
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div>
+                    <div class="stats-number">15+</div>
+                    <p class="text-gray-400">Стриминговых сервисов</p>
+                </div>
+                <div>
+                    <div class="stats-number">98%</div>
+                    <p class="text-gray-400">Успешность обхода</p>
+                </div>
+                <div>
+                    <div class="stats-number">4K</div>
+                    <p class="text-gray-400">Качество видео</p>
+                </div>
+                <div>
+                    <div class="stats-number">5</div>
+                    <p class="text-gray-400">Методов обхода</p>
+                </div>
+            </div>
+            
+            <!-- Main CTA -->
+            <div class="bg-gray-900 rounded-2xl p-8 mb-12 border border-gray-700">
+                <h3 class="text-2xl font-bold mb-4">🚀 Быстрое решение для всех сервисов</h3>
+                <p class="text-gray-300 mb-6">SAFENET-VPN оптимизирован для стриминга. 4K качество, обход всех блокировок, поддержка 24/7.</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-400 mb-1">126₽/мес</div>
+                        <div class="text-sm text-gray-400">Первый месяц 107₽</div>
+                    </div>
+                    <a href="https://t.me/SafeNetVpn_bot?start=afrrica" class="btn-primary px-8 py-4 rounded-full text-lg font-bold inline-flex items-center">
+                        <i class="fab fa-telegram-plane mr-3"></i>
+                        Подключить SAFENET-VPN
+                    </a>
+                </div>
+                <div class="flex justify-center gap-6 mt-4 text-sm text-gray-400">
+                    <span>✅ 4K качество</span>
+                    <span>✅ Все устройства</span>
+                    <span>✅ Без логов</span>
+                    <span>✅ Поддержка 24/7</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <div class="grid">
-      <main>
-        <section class="card">
-          <h2>Почему стриминговые сервисы блокируют контент</h2>
-          <p>Большинство платформ ограничивают доступ к контенту по географическому принципу из-за лицензионных соглашений. Фильм, доступный в США, может быть недоступен в России, и наоборот. VPN позволяет виртуально изменить местоположение и получить доступ к полным библиотекам контента.</p>
-          
-          <div class="tips-grid">
-            <div class="tip-card">
-              <h3>Преимущества VPN для стриминга</h3>
-              <ul class="check">
-                <li>Доступ к эксклюзивному контенту других стран</li>
-                <li>Обход региональных блокировок и цензуры</li>
-                <li>Защита от замедления провайдером</li>
-                <li>Конфиденциальность просмотра</li>
-              </ul>
+    <!-- Current Problems Section -->
+    <section class="py-16 px-4 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                🚫 Проблемы со стримингом в России в 2025
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="card rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-red-400">
+                        <i class="fas fa-ban mr-3"></i>Что заблокировано
+                    </h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-times text-red-400 mr-3"></i>YouTube — замедление до 70%</li>
+                        <li class="flex items-center"><i class="fas fa-times text-red-400 mr-3"></i>Discord — полная блокировка</li>
+                        <li class="flex items-center"><i class="fas fa-times text-red-400 mr-3"></i>Netflix — геоблокировка</li>
+                        <li class="flex items-center"><i class="fas fa-times text-red-400 mr-3"></i>Disney+ — недоступен в РФ</li>
+                        <li class="flex items-center"><i class="fas fa-times text-red-400 mr-3"></i>TikTok — частичные ограничения</li>
+                        <li class="flex items-center"><i class="fas fa-times text-red-400 mr-3"></i>Twitch — замедление стримов</li>
+                    </ul>
+                </div>
+                
+                <div class="card rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-green-400">
+                        <i class="fas fa-check-circle mr-3"></i>Как решаем в 2025
+                    </h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>VPN — универсальное решение</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Amnezia VPN — собственный сервер</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>GoodbyeDPI — обход без VPN</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Telegram боты — бесплатные ключи</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Smart DNS — для Smart TV</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Альтернативные приложения</li>
+                    </ul>
+                </div>
             </div>
-            <div class="tip-card">
-              <h3>Требования к VPN</h3>
-              <ul class="check">
-                <li>Высокая скорость для HD/4K качества</li>
-                <li>Серверы в нужных странах</li>
-                <li>Обход детекции стриминговыми сервисами</li>
-                <li>Стабильность подключения</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section id="services-list" class="card">
-          <h2>Стриминговые сервисы</h2>
-          <div class="service-cards">
-            <div class="service-card popular">
-              <h3>📺 Netflix</h3>
-              <div class="desc">Крупнейшая библиотека фильмов и сериалов. США, Великобритания, Канада, Япония — разные каталоги в каждой стране.</div>
-              <div class="meta">
-                <span>США: 15000+ тайтлов</span>
-                <span>4K поддержка</span>
-                <span>Активная блокировка VPN</span>
-              </div>
-              <a href="/streaming/netflix/" class="btn-card" onclick="ym(103602117,'reachGoal','streaming_card_netflix')">Настроить для Netflix</a>
-            </div>
-
-            <div class="service-card popular">
-              <h3>🎬 YouTube</h3>
-              <div class="desc">Видеохостинг с региональными ограничениями. Некоторые видео и каналы недоступны в определенных странах.</div>
-              <div class="meta">
-                <span>Замедления в РФ</span>
-                <span>Региональные блокировки</span>
-                <span>Премиум контент</span>
-              </div>
-              <a href="/streaming/youtube/" class="btn-card" onclick="ym(103602117,'reachGoal','streaming_card_youtube')">Настроить для YouTube</a>
-            </div>
-
-            <div class="service-card coming-soon">
-              <h3>🏰 Disney+</h3>
-              <div class="desc">Marvel, Star Wars, Disney классика. Недоступен в России, работает в США, Европе, Канаде.</div>
-              <div class="meta">
-                <span>США/ЕС эксклюзив</span>
-                <span>4K + HDR</span>
-                <span>Строгая геоблокировка</span>
-              </div>
-              <a href="#" class="btn-card" onclick="ym(103602117,'reachGoal','streaming_card_disney_soon')">Скоро инструкция</a>
-            </div>
-
-            <div class="service-card coming-soon">
-              <h3>📽️ Hulu</h3>
-              <div class="desc">Американский сервис с эксклюзивными сериалами и live TV. Работает только в США.</div>
-              <div class="meta">
-                <span>Только США</span>
-                <span>Live TV</span>
-                <span>Оригинальный контент</span>
-              </div>
-              <a href="#" class="btn-card" onclick="ym(103602117,'reachGoal','streaming_card_hulu_soon')">Скоро инструкция</a>
-            </div>
-
-            <div class="service-card coming-soon">
-              <h3>🎮 Twitch</h3>
-              <div class="desc">Стриминг игр и развлекательного контента. Некоторые каналы заблокированы по регионам.</div>
-              <div class="meta">
-                <span>Игровые стримы</span>
-                <span>Региональная музыка</span>
-                <span>Премиум функции</span>
-              </div>
-              <a href="#" class="btn-card" onclick="ym(103602117,'reachGoal','streaming_card_twitch_soon')">Скоро инструкция</a>
-            </div>
-
-            <div class="service-card coming-soon">
-              <h3>🏈 ESPN / BBC iPlayer</h3>
-              <div class="desc">Спортивные трансляции и новости. ESPN в США, BBC iPlayer в Великобритании.</div>
-              <div class="meta">
-                <span>Спорт в прямом эфире</span>
-                <span>Национальные лиги</span>
-                <span>Новости</span>
-              </div>
-              <a href="#" class="btn-card" onclick="ym(103602117,'reachGoal','streaming_card_sports_soon')">Скоро инструкция</a>
-            </div>
-          </div>
-
-          <div class="note">
-            <strong>Планируется:</strong> Amazon Prime Video, HBO Max, Apple TV+, Paramount+, Peacock. Напишите в <a href="https://t.me/SafeNetVpn_bot?start=afrrica" onclick="ym(103602117,'reachGoal','streaming_request_service')">бот</a>, если нужна инструкция для конкретного сервиса.
-          </div>
-        </section>
-
-        <section class="card">
-          <h2>Лучшие страны для стриминга</h2>
-          <p>Выбор правильной локации VPN критически важен для доступа к максимальному количеству контента.</p>
-          
-          <div class="countries">
-            <div class="country">
-              <div class="flag">🇺🇸</div>
-              <strong>США</strong><br>
-              <span class="small muted">Самые большие библиотеки Netflix, Hulu, Disney+</span>
-            </div>
-            <div class="country">
-              <div class="flag">🇬🇧</div>
-              <strong>Великобритания</strong><br>
-              <span class="small muted">BBC iPlayer, Netflix UK, спорт</span>
-            </div>
-            <div class="country">
-              <div class="flag">🇨🇦</div>
-              <strong>Канада</strong><br>
-              <span class="small muted">Netflix CA, стабильные серверы</span>
-            </div>
-            <div class="country">
-              <div class="flag">🇯🇵</div>
-              <strong>Япония</strong><br>
-              <span class="small muted">Аниме, Netflix JP, местный контент</span>
-            </div>
-            <div class="country">
-              <div class="flag">🇩🇪</div>
-              <strong>Германия</strong><br>
-              <span class="small muted">Европейский контент, высокая скорость</span>
-            </div>
-            <div class="country">
-              <div class="flag">🇳🇱</div>
-              <strong>Нидерланды</strong><br>
-              <span class="small muted">Либеральные законы, хорошие серверы</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="card">
-          <h2>Оптимизация для качества HD/4K</h2>
-          <p>Для комфортного просмотра в высоком качестве важно правильно настроить VPN и выбрать оптимальные параметры.</p>
-          
-          <h3>Требования к скорости</h3>
-          <ul>
-            <li><strong>SD (480p):</strong> 3-5 Мбит/с</li>
-            <li><strong>HD (720p/1080p):</strong> 5-10 Мбит/с</li>
-            <li><strong>4K/UHD:</strong> 15-25 Мбит/с</li>
-            <li><strong>4K + HDR:</strong> 25+ Мбит/с</li>
-          </ul>
-          
-          <h3>Советы по оптимизации</h3>
-          <ul class="check">
-            <li><strong>Протокол:</strong> WireGuard обеспечивает максимальную скорость</li>
-            <li><strong>Сервер:</strong> выбирайте географически ближний к целевой стране</li>
-            <li><strong>Подключение:</strong> Ethernet стабильнее Wi-Fi для 4K</li>
-            <li><strong>Время:</strong> избегайте пиковых часов (19:00-23:00 по местному времени)</li>
-            <li><strong>Устройство:</strong> для Smart TV лучше использовать VPN на роутере</li>
-          </ul>
-        </section>
-
-        <section class="card">
-          <h2>Общий алгоритм настройки</h2>
-          <ol>
-            <li><strong>Выберите целевой сервис</strong> из списка выше и изучите детальную инструкцию</li>
-            <li><strong>Получите конфигурацию</strong> в <a href="https://t.me/SafeNetVpn_bot?start=afrrica" onclick="ym(103602117,'reachGoal','streaming_step_config')">Telegram-боте SAFENET-VPN</a></li>
-            <li><strong>Настройте VPN</strong> на устройстве согласно <a href="/devices/">инструкциям для вашей платформы</a></li>
-            <li><strong>Подключитесь к серверу</strong> в нужной стране (США для Netflix, любая для YouTube)</li>
-            <li><strong>Откройте сервис в приватном окне</strong> или перезапустите приложение</li>
-            <li><strong>При ошибках</strong> смените сервер и очистите куки/кеш</li>
-          </ol>
-        </section>
-
-        <section class="card">
-          <h2>Частые вопросы по стримингу</h2>
-          
-          <h3>Законно ли использовать VPN для стриминга?</h3>
-          <p>Использование VPN само по себе законно в большинстве стран. Однако это может нарушать условия использования некоторых стриминговых сервисов. Изучите ToS конкретного сервиса.</p>
-
-          <h3>Почему Netflix показывает ошибку "вы используете прокси"?</h3>
-          <p>Netflix активно блокирует VPN-серверы. Попробуйте сменить сервер в той же стране, очистить куки браузера, использовать приватное окно или другой протокол VPN.</p>
-
-          <h3>Какую страну выбрать для максимального каталога Netflix?</h3>
-          <p>США имеют один из самых больших каталогов, но серверы часто блокируются. Канада и Великобритания — хорошие альтернативы с большим выбором контента.</p>
-
-          <h3>Будет ли работать VPN на Smart TV?</h3>
-          <p>Да, но методы отличаются: на Android TV можно установить VPN-приложение, для Samsung/LG нужен VPN на роутере или раздача с ПК. Подробнее: <a href="/devices/smart-tv/">VPN для Smart TV</a>.</p>
-
-          <h3>Влияет ли VPN на качество видео?</h3>
-          <p>Качественный VPN замедляет скорость на 10-20%. При хорошем интернете (50+ Мбит/с) это не влияет на HD/4K. Используйте WireGuard для максимальной скорости.</p>
-
-          <h3>Можно ли смотреть несколько сервисов одновременно?</h3>
-          <p>Да, один VPN-сервер может работать с разными стриминговыми платформами. Главное — выбрать сервер в стране, где доступны нужные сервисы.</p>
-        </section>
-
-        <section class="card also">
-          <h2>Полезные материалы</h2>
-          <ul>
-            <li><a href="/devices/smart-tv/">VPN для Smart TV — Samsung, LG, Android TV</a></li>
-            <li><a href="/devices/windows/">VPN для Windows — WireGuard и OpenVPN</a></li>
-            <li><a href="/devices/android/">VPN для Android — мобильный стриминг</a></li>
-            <li><a href="/troubleshooting/not-working/">VPN не работает — решение проблем</a></li>
-            <li><a href="/diagnostics/ip-check/">Проверка IP адреса и утечек</a></li>
-            <li><a href="/guide/vpn-fundamentals/">Что такое VPN простыми словами</a></li>
-          </ul>
-        </section>
-
-        <section class="card">
-          <div class="footer-cta">
-            <div>
-              <h3>Весь мир стриминга без границ: SAFENET‑VPN</h3>
-              <p class="muted">Оптимизация для Netflix, YouTube, Disney+. 4K качество, от 126₽/мес (первый месяц 107₽).</p>
-            </div>
-            <a class="btn" href="https://t.me/SafeNetVpn_bot?start=afrrica" onclick="ym(103602117,'reachGoal','streaming_footer_cta')" rel="noopener nofollow">Начать в Telegram</a>
-          </div>
-        </section>
-      </main>
-
-      <aside>
-        <div class="card">
-          <h3>🔥 Топ стриминг</h3>
-          <ul class="small">
-            <li><a href="/streaming/netflix/" onclick="ym(103602117,'reachGoal','streaming_sidebar_netflix')"><strong>Netflix</strong> — США, UK, Канада, Япония</a></li>
-            <li><a href="/streaming/youtube/" onclick="ym(103602117,'reachGoal','streaming_sidebar_youtube')"><strong>YouTube</strong> — без замедлений</a></li>
-            <li class="muted">Disney+ — скоро инструкция</li>
-            <li class="muted">Hulu — скоро инструкция</li>
-          </ul>
         </div>
-        <div class="card">
-          <h3>Требуется помощь?</h3>
-          <p class="small muted">Поможем подобрать серверы под конкретные стриминговые сервисы и оптимизировать качество.</p>
-          <a class="btn" href="https://t.me/SafeNetVpn_bot?start=afrrica" onclick="ym(103602117,'reachGoal','streaming_sidebar_help')" rel="noopener nofollow">Получить оптимальные серверы</a>
+    </section>
+
+    <!-- Streaming Services Grid -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                📺 Стриминговые сервисы и методы доступа
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- YouTube -->
+                <div class="service-card rounded-2xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-youtube text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">YouTube</h3>
+                            <p class="text-sm text-gray-400">Замедление 70%</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Самая популярная видеоплатформа. Искусственное замедление провайдерами, ограничение качества до 480p.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            VPN — полное восстановление скорости
+                        </div>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            GoodbyeDPI — бесплатный обход
+                        </div>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Smart DNS — для Smart TV
+                        </div>
+                    </div>
+                    <div class="flex gap-2">
+                        <a href="https://internet-security-hub.github.io/streaming/youtube-access/" class="text-green-400 text-sm hover:underline">Все способы</a>
+                        <span class="text-gray-600">•</span>
+                        <a href="https://internet-security-hub.github.io/streaming/youtube/" class="text-green-400 text-sm hover:underline">Оптимизация 4K</a>
+                    </div>
+                </div>
+
+                <!-- Netflix -->
+                <div class="service-card rounded-2xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-film text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Netflix</h3>
+                            <p class="text-sm text-gray-400">Геоблокировка</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Разные каталоги по странам. США — 15000+ фильмов, Россия — 4000+. Активная борьба с VPN.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            VPN с обфускацией
+                        </div>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Смена серверов при блокировке
+                        </div>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Smart DNS альтернатива
+                        </div>
+                    </div>
+                    <a href="https://internet-security-hub.github.io/streaming/netflix/" class="text-green-400 text-sm hover:underline">Подробная инструкция</a>
+                </div>
+
+                <!-- Discord -->
+                <div class="service-card rounded-2xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-discord text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Discord</h3>
+                            <p class="text-sm text-red-400">Полная блокировка</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Мессенджер для геймеров заблокирован с 2022 года. Голосовые чаты, стримы, сообщества недоступны.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            VPN — единственное решение
+                        </div>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            GoodbyeDPI + Zapret
+                        </div>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Мобильные VPN-клиенты
+                        </div>
+                    </div>
+                    <a href="https://internet-security-hub.github.io/guide/bypass-without-vpn-2025/" class="text-green-400 text-sm hover:underline">Инструкция по обходу</a>
+                </div>
+
+                <!-- Disney+ -->
+                <div class="service-card rounded-2xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-magic text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Disney+</h3>
+                            <p class="text-sm text-gray-400">Недоступен в РФ</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Marvel, Star Wars, Disney классика. Официально недоступен в России. Требует VPN с серверами в США/ЕС.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            VPN серверы США/Европы
+                        </div>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Регистрация через VPN
+                        </div>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            4K HDR поддержка
+                        </div>
+                    </div>
+                    <span class="text-gray-500 text-sm">Инструкция в разработке</span>
+                </div>
+
+                <!-- Telegram -->
+                <div class="service-card rounded-2xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-telegram-plane text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Telegram</h3>
+                            <p class="text-sm text-yellow-400">Периодические сбои</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Основной мессенджер россиян. Иногда замедляется или частично блокируется. Голосовые вызовы могут не работать.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Встроенные прокси MTProto
+                        </div>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            VPN для звонков
+                        </div>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Бесплатные VPN-боты
+                        </div>
+                    </div>
+                    <a href="https://internet-security-hub.github.io/guide/telegram-whatsapp-calls/" class="text-green-400 text-sm hover:underline">Звонки через VPN</a>
+                </div>
+
+                <!-- TikTok -->
+                <div class="service-card rounded-2xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-tiktok text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">TikTok</h3>
+                            <p class="text-sm text-yellow-400">Частичные ограничения</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Популярная соцсеть коротких видео. В России работает, но некоторый контент может быть недоступен.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            VPN для полного контента
+                        </div>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Смена региона в профиле
+                        </div>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Доступ к трендам других стран
+                        </div>
+                    </div>
+                    <a href="https://internet-security-hub.github.io/streaming/social-media-vpn/" class="text-green-400 text-sm hover:underline">VPN для соцсетей</a>
+                </div>
+            </div>
         </div>
-      </aside>
-    </div>
+    </section>
 
-    <footer class="muted small" style="margin:24px 0;">
-      © SAFENET‑VPN. Смотрите любимый контент без географических ограничений.
-    </footer>
-  </div>
+    <!-- Methods Comparison -->
+    <section class="py-16 px-4 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                🛠️ Методы обхода блокировок стриминга в 2025
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Commercial VPN -->
+                <div class="method-card rounded-2xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-shield-alt text-black text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Коммерческий VPN</h3>
+                            <p class="text-sm text-green-400">Рекомендуется</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Готовое решение с поддержкой, множеством серверов и оптимизацией для стриминга.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            <span class="text-gray-300">Мгновенная настройка</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            <span class="text-gray-300">Серверы по всему миру</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            <span class="text-gray-300">Поддержка 24/7</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            <span class="text-gray-300">4K качество</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-green-400 mb-2">126₽/мес</div>
+                        <a href="https://t.me/SafeNetVpn_bot?start=afrrica" class="btn-primary px-6 py-2 rounded-lg inline-block">
+                            Попробовать SAFENET-VPN
+                        </a>
+                    </div>
+                </div>
 
-  <!-- Schema.org JSON-LD: CollectionPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "VPN для стриминга — Netflix, YouTube, Disney+ без ограничений",
-    "description": "Полное руководство по использованию VPN для стриминговых сервисов. Обход блокировок, выбор локации, оптимизация качества.",
-    "mainEntity": {
-      "@type": "ItemList",
-      "numberOfItems": 2,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "HowTo",
-            "name": "VPN для Netflix",
-            "url": "https://internet-security-hub.github.io/streaming/netflix/",
-            "description": "Как смотреть Netflix через VPN, выбор локации, устранение ошибки прокси"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "HowTo",
-            "name": "VPN для YouTube",
-            "url": "https://internet-security-hub.github.io/streaming/youtube/",
-            "description": "Как смотреть YouTube через VPN, обход замедлений и блокировок"
-          }
-        }
-      ]
-    }
-  }
-  </script>
+                <!-- Amnezia VPN -->
+                <div class="method-card rounded-2xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-server text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Amnezia VPN</h3>
+                            <p class="text-sm text-purple-400">Self-hosted</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Собственный VPN-сервер на арендованном VPS. Полный контроль и максимальная приватность.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            <span class="text-gray-300">Полная приватность</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            <span class="text-gray-300">Обход DPI-блокировок</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-times text-red-400 mr-2"></i>
+                            <span class="text-gray-300">Требует настройку</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-times text-red-400 mr-2"></i>
+                            <span class="text-gray-300">Один сервер</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-purple-400 mb-2">200₽/мес</div>
+                        <a href="https://internet-security-hub.github.io/guide/amnezia-vpn-setup-2025/" class="bg-purple-600 text-white px-6 py-2 rounded-lg inline-block hover:bg-purple-700">
+                            Настроить Amnezia
+                        </a>
+                    </div>
+                </div>
 
-  <!-- Schema.org JSON-LD: FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Законно ли использовать VPN для стриминга?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Использование VPN само по себе законно в большинстве стран. Однако это может нарушать условия использования некоторых стриминговых сервисов."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Почему Netflix показывает ошибку прокси?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Netflix активно блокирует VPN-серверы. Попробуйте сменить сервер, очистить куки, использовать приватное окно или другой протокол VPN."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Какую страну выбрать для максимального каталога Netflix?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "США имеют один из самых больших каталогов, но серверы часто блокируются. Канада и Великобритания — хорошие альтернативы."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Влияет ли VPN на качество видео?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Качественный VPN замедляет скорость на 10-20%. При хорошем интернете (50+ Мбит/с) это не влияет на HD/4K качество."
-        }
-      }
-    ]
-  }
-  </script>
+                <!-- GoodbyeDPI -->
+                <div class="method-card rounded-2xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-unlock text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">GoodbyeDPI</h3>
+                            <p class="text-sm text-orange-400">Бесплатно</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Обход DPI-блокировок без VPN. Работает только для некоторых сервисов и провайдеров.</p>
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            <span class="text-gray-300">Полностью бесплатно</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            <span class="text-gray-300">Высокая скорость</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-times text-red-400 mr-2"></i>
+                            <span class="text-gray-300">Не универсален</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-times text-red-400 mr-2"></i>
+                            <span class="text-gray-300">Сложная настройка</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-orange-400 mb-2">Бесплатно</div>
+                        <a href="https://internet-security-hub.github.io/guide/bypass-without-vpn-2025/" class="bg-orange-600 text-white px-6 py-2 rounded-lg inline-block hover:bg-orange-700">
+                            Инструкция
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Schema.org JSON-LD: Breadcrumbs -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Главная",
-        "item": "https://internet-security-hub.github.io/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Стриминг",
-        "item": "https://internet-security-hub.github.io/streaming/"
-      }
-    ]
-  }
-  </script>
+            <!-- Comparison Table -->
+            <div class="comparison-table rounded-2xl overflow-hidden">
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th class="px-6 py-4 text-left">Критерий</th>
+                            <th class="px-6 py-4 text-center">SAFENET-VPN</th>
+                            <th class="px-6 py-4 text-center">Amnezia VPN</th>
+                            <th class="px-6 py-4 text-center">GoodbyeDPI</th>
+                            <th class="px-6 py-4 text-center">Бесплатные VPN</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <tr>
+                            <td class="px-6 py-4">Скорость для 4K</td>
+                            <td class="px-6 py-4 text-center">✅ До 100 Мбит/с</td>
+                            <td class="px-6 py-4 text-center">✅ Максимальная</td>
+                            <td class="px-6 py-4 text-center">✅ Без потерь</td>
+                            <td class="px-6 py-4 text-center">❌ До 5 Мбит/с</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Простота настройки</td>
+                            <td class="px-6 py-4 text-center">✅ 3 минуты</td>
+                            <td class="px-6 py-4 text-center">⚠️ 15 минут</td>
+                            <td class="px-6 py-4 text-center">❌ Сложно</td>
+                            <td class="px-6 py-4 text-center">✅ Мгновенно</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Обход блокировок Netflix</td>
+                            <td class="px-6 py-4 text-center">✅ Гарантированно</td>
+                            <td class="px-6 py-4 text-center">✅ Высокий</td>
+                            <td class="px-6 py-4 text-center">❌ Не работает</td>
+                            <td class="px-6 py-4 text-center">❌ Блокируется</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Стабильность</td>
+                            <td class="px-6 py-4 text-center">✅ 99.9%</td>
+                            <td class="px-6 py-4 text-center">✅ Высокая</td>
+                            <td class="px-6 py-4 text-center">⚠️ Зависит от провайдера</td>
+                            <td class="px-6 py-4 text-center">❌ Частые сбои</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Техподдержка</td>
+                            <td class="px-6 py-4 text-center">✅ 24/7 Telegram</td>
+                            <td class="px-6 py-4 text-center">⚠️ Сообщество</td>
+                            <td class="px-6 py-4 text-center">❌ Отсутствует</td>
+                            <td class="px-6 py-4 text-center">❌ Ограниченная</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Стоимость (₽/мес)</td>
+                            <td class="px-6 py-4 text-center font-bold text-green-400">126₽</td>
+                            <td class="px-6 py-4 text-center">~200₽</td>
+                            <td class="px-6 py-4 text-center font-bold text-green-400">0₽</td>
+                            <td class="px-6 py-4 text-center font-bold text-green-400">0₽</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Setup Guide -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                ⚡ Быстрая настройка за 5 минут
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- VPN Setup -->
+                <div class="card rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-green-400">
+                        <i class="fas fa-shield-alt mr-3"></i>
+                        VPN (рекомендуется)
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 gradient-bg rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-black font-bold text-sm">1</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Подключитесь к боту</p>
+                                <p class="text-gray-400 text-sm">Переходите по ссылке: t.me/SafeNetVpn_bot</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 gradient-bg rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-black font-bold text-sm">2</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Выберите устройство</p>
+                                <p class="text-gray-400 text-sm">Android, iPhone, Windows, macOS, Smart TV</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 gradient-bg rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-black font-bold text-sm">3</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Получите конфигурацию</p>
+                                <p class="text-gray-400 text-sm">Бот пришлет настройки и инструкции</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 gradient-bg rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-black font-bold text-sm">4</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Наслаждайтесь стримингом</p>
+                                <p class="text-gray-400 text-sm">YouTube 4K, Netflix, Discord — всё работает</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <a href="https://t.me/SafeNetVpn_bot?start=afrrica" class="btn-primary px-8 py-4 rounded-full text-lg font-bold inline-flex items-center">
+                            <i class="fab fa-telegram-plane mr-3"></i>
+                            Начать настройку
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Alternative Methods -->
+                <div class="card rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-orange-400">
+                        <i class="fas fa-tools mr-3"></i>
+                        Альтернативные методы
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-semibold mb-2">🛠️ GoodbyeDPI + Zapret</h4>
+                            <p class="text-gray-400 text-sm mb-2">Бесплатный обход DPI-блокировок для YouTube и Discord</p>
+                            <a href="https://internet-security-hub.github.io/guide/bypass-without-vpn-2025/" class="text-green-400 text-sm hover:underline">Подробная инструкция →</a>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold mb-2">🔧 Amnezia VPN</h4>
+                            <p class="text-gray-400 text-sm mb-2">Собственный VPN-сервер с полным контролем</p>
+                            <a href="https://internet-security-hub.github.io/guide/amnezia-vpn-setup-2025/" class="text-green-400 text-sm hover:underline">Создать сервер →</a>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold mb-2">📱 Альтернативные приложения</h4>
+                            <p class="text-gray-400 text-sm mb-2">YouTube ReVanced, NewPipe, SmartTube для TV</p>
+                            <a href="https://internet-security-hub.github.io/streaming/youtube-access/" class="text-green-400 text-sm hover:underline">Список приложений →</a>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold mb-2">🌐 Smart DNS</h4>
+                            <p class="text-gray-400 text-sm mb-2">Для Smart TV и игровых консолей</p>
+                            <a href="https://internet-security-hub.github.io/devices/smart-tv/" class="text-green-400 text-sm hover:underline">Настройка для ТВ →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-4 bg-gray-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                ❓ Частые вопросы о стриминге с VPN
+            </h2>
+            
+            <div class="space-y-6">
+                <div class="card rounded-2xl p-6">
+                    <h3 class="text-xl font-bold mb-4">Какой VPN лучше всего подходит для стриминга?</h3>
+                    <p class="text-gray-300">Для стриминга нужен VPN с высокой скоростью, серверами в нужных странах и обходом блокировок стриминговых сервисов. SAFENET-VPN специально оптимизирован для YouTube, Netflix, Discord с поддержкой 4K качества.</p>
+                </div>
+                
+                <div class="card rounded-2xl p-6">
+                    <h3 class="text-xl font-bold mb-4">Замедляет ли VPN скорость интернета для видео?</h3>
+                    <p class="text-gray-300">Качественный VPN замедляет скорость на 10-20%. При хорошем интернете (50+ Мбит/с) это не влияет на качество видео. Протокол WireGuard обеспечивает минимальные потери скорости.</p>
+                </div>
+                
+                <div class="card rounded-2xl p-6">
+                    <h3 class="text-xl font-bold mb-4">Можно ли смотреть Netflix из России через VPN?</h3>
+                    <p class="text-gray-300">Да, но Netflix активно блокирует VPN-серверы. Нужен VPN с обфускацией трафика и регулярным обновлением серверов. SAFENET-VPN поддерживает стабильный доступ к Netflix.</p>
+                </div>
+                
+                <div class="card rounded-2xl p-6">
+                    <h3 class="text-xl font-bold mb-4">Работает ли VPN на Smart TV для YouTube?</h3>
+                    <p class="text-gray-300">На Android TV можно установить VPN-приложение. Для Samsung/LG нужно настроить VPN на роутере или раздавать интернет с компьютера. Подробные инструкции есть в разделе устройств.</p>
+                </div>
+                
+                <div class="card rounded-2xl p-6">
+                    <h3 class="text-xl font-bold mb-4">Есть ли бесплатные способы смотреть YouTube?</h3>
+                    <p class="text-gray-300">Да: смена DNS, GoodbyeDPI, альтернативные приложения (YouTube ReVanced, NewPipe). Но они менее стабильны и не гарантируют качество 4K. VPN остается самым надежным решением.</p>
+                </div>
+                
+                <div class="card rounded-2xl p-6">
+                    <h3 class="text-xl font-bold mb-4">Безопасно ли использовать VPN для стриминга?</h3>
+                    <p class="text-gray-300">VPN повышает безопасность, шифруя ваш трафик. Это особенно важно в общественных Wi-Fi. Главное — выбирать надежного провайдера без логирования активности.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                🎬 Начните смотреть без ограничений уже сегодня
+            </h2>
+            <p class="text-xl text-gray-300 mb-12">
+                SAFENET-VPN — это стабильный 4K стриминг, обход всех блокировок и поддержка 24/7. 
+                Попробуйте первый месяц всего за 107₽!
+            </p>
+            
+            <div class="bg-gray-900 rounded-2xl p-8 mb-8">
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                    <div class="text-center">
+                        <div class="text-4xl mb-2">⚡</div>
+                        <h3 class="font-bold mb-2">Мгновенная настройка</h3>
+                        <p class="text-gray-400 text-sm">3 минуты через Telegram-бот</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-2">🎥</div>
+                        <h3 class="font-bold mb-2">4K качество</h3>
+                        <p class="text-gray-400 text-sm">Без буферизации и задержек</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-2">🛡️</div>
+                        <h3 class="font-bold mb-2">Полная защита</h3>
+                        <p class="text-gray-400 text-sm">Шифрование без логирования</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-400 mb-1">126₽/мес</div>
+                        <div class="text-sm text-gray-400">Первый месяц 107₽ (экономия 15%)</div>
+                    </div>
+                    <a href="https://t.me/SafeNetVpn_bot?start=afrrica" class="btn-primary px-8 py-4 rounded-full text-xl font-bold inline-flex items-center">
+                        <i class="fab fa-telegram-plane mr-3"></i>
+                        Подключить SAFENET-VPN
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-gray-400 mb-4">
+                    <strong>Важно:</strong> Информация носит образовательный характер. Пользователи несут ответственность 
+                    за соблюдение законодательства при использовании VPN-технологий.
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+                    <a href="https://internet-security-hub.github.io/devices/" class="hover:text-green-400">VPN для всех устройств</a>
+                    <span>•</span>
+                    <a href="https://internet-security-hub.github.io/troubleshooting/" class="hover:text-green-400">Решение проблем</a>
+                    <span>•</span>
+                    <a href="https://internet-security-hub.github.io/diagnostics/ip-check/" class="hover:text-green-400">Проверка IP</a>
+                    <span>•</span>
+                    <a href="https://internet-security-hub.github.io/legal/" class="hover:text-green-400">Юридическая информация</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
