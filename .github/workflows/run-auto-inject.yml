@@ -1,0 +1,30 @@
+name: Run Auto-Inject Dates Script
+on:
+  workflow_dispatch:  # Запустить вручную кнопкой
+
+jobs:
+  auto-inject:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Make script executable
+        run: chmod +x auto-inject-dates.sh
+        
+      - name: Run auto-inject script
+        run: ./auto-inject-dates.sh
+        
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          
+          if ! git diff --staged --quiet; then
+            git commit -m "🤖 Авто-инжект скриптов обновления дат"
+            git push
+            echo "✅ Скрипты успешно внедрены!"
+          else
+            echo "ℹ️ Нет изменений для коммита"
+          fi
