@@ -1,0 +1,55 @@
+name: Update Dates Daily Moscow Time
+on:
+  schedule:
+    - cron: '0 22 * * *'  # 22:00 UTC = 01:00 MSK (UTC+3)
+  workflow_dispatch:  # Можно запустить вручную
+
+jobs:
+  update-dates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Set Moscow timezone and update dates
+        run: |
+          # Установить московскую временную зону
+          export TZ='Europe/Moscow'
+          
+          # Получить текущую дату и время в московской зоне
+          MOSCOW_DATE=$(TZ=Europe/Moscow date +"%Y-%m-%d")
+          MOSCOW_DATETIME=$(TZ=Europe/Moscow date +"%Y-%m-%dT01:00:00+03:00")
+          MOSCOW_SITEMAP_DATE=$(TZ=Europe/Moscow date +"%Y-%m-%d")
+          
+          echo "Updating to Moscow date: $MOSCOW_DATE"
+          echo "Updating to Moscow datetime: $MOSCOW_DATETIME"
+          
+          # Обновить article:modified_time во всех HTML файлах
+          find . -name "*.html" -type f -exec sed -i "s/<meta property=\"article:modified_time\" content=\"[^\"]*\"/<meta property=\"article:modified_time\" content=\"$MOSCOW_DATETIME\"/g" {} \;
+          
+          # Обновить dateModified в JSON-LD Schema
+          find . -name "*.html" -type f -exec sed -i "s/\"dateModified\": \"[^\"]*\"/\"dateModified\": \"$MOSCOW_DATE\"/g" {} \;
+          
+          # Обновить lastmod в sitemap.xml
+          if [ -f "sitemap.xml" ]; then
+            sed -i "s/<lastmod>[^<]*<\/lastmod>/<lastmod>$MOSCOW_SITEMAP_DATE<\/lastmod>/g" sitemap.xml
+          fi
+          
+          # Обновить любые другие временные метки
+          find . -name "*.html" -type f -exec sed -i "s/\"datePublished\": \"2025-08-[0-9][0-9]\"/\"datePublished\": \"$MOSCOW_DATE\"/g" {} \;
+          
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          git add -A
+          
+          # Проверить есть ли изменения
+          if ! git diff --staged --quiet; then
+            MOSCOW_TIME=$(TZ=Europe/Moscow date +"%Y-%m-%d %H:%M MSK")
+            git commit -m "🤖 Авто-обновление дат: $MOSCOW_TIME"
+            git push
+            echo "Dates updated successfully at $MOSCOW_TIME"
+          else
+            echo "No changes to commit"
+          fi
