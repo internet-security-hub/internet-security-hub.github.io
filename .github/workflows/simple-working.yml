@@ -1,0 +1,41 @@
+name: Simple Working Update
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Update dates
+        run: |
+          # Московская дата
+          MOSCOW_DATE=$(TZ=Europe/Moscow date +"%Y-%m-%d")
+          MOSCOW_TIME=$(TZ=Europe/Moscow date +"%Y-%m-%d %H:%M MSK")
+          echo "Обновляем на дату: $MOSCOW_DATE"
+          
+          # Обновить главную страницу
+          if [ -f "index.html" ]; then
+            # Добавить комментарий с датой для создания изменения
+            sed -i 's/<!-- Updated: [^>]* -->/<!-- Updated: '"$MOSCOW_TIME"' -->/g' index.html
+            if ! grep -q "Updated:" index.html; then
+              sed -i 's|</head>|    <!-- Updated: '"$MOSCOW_TIME"' -->\n</head>|' index.html
+            fi
+            echo "Главная страница обновлена"
+          fi
+          
+      - name: Commit changes
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add -A
+          
+          MOSCOW_TIME=$(TZ=Europe/Moscow date +"%Y-%m-%d %H:%M MSK")
+          git commit -m "🤖 Тест обновления: $MOSCOW_TIME" || echo "No changes"
+          git push || echo "Push failed"
