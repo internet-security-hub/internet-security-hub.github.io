@@ -1,0 +1,112 @@
+name: Fix Auto-Inject Dates
+on:
+  workflow_dispatch:
+
+jobs:
+  auto-inject:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Debug - List files
+        run: |
+          echo "Содержимое корневой папки:"
+          ls -la
+          echo "Поиск .sh файлов:"
+          find . -name "*.sh" -type f
+        
+      - name: Create and run auto-inject script
+        run: |
+          # Создаем скрипт прямо здесь
+          cat > auto-inject-fix.sh << 'EOF'
+          #!/bin/bash
+          echo "🚀 Начинаем автоматическую вставку скриптов..."
+          
+          # Московская дата и время
+          MOSCOW_DATE=$(TZ=Europe/Moscow date +"%Y-%m-%d")
+          MOSCOW_DATETIME="${MOSCOW_DATE}T01:00:00+03:00"
+          
+          echo "Московская дата: $MOSCOW_DATE"
+          
+          # Счетчик обработанных файлов
+          COUNT=0
+          
+          # Обработать все HTML файлы
+          find . -name "*.html" -type f | while read file; do
+              echo "Обрабатываем: $file"
+              
+              # Добавить meta-тег modified_time если его нет
+              if ! grep -q 'article:modified_time' "$file"; then
+                  sed -i '/<meta name="viewport"/a <meta property="article:modified_time" content="'"$MOSCOW_DATETIME"'">' "$file"
+                  echo "✅ Добавлен meta-тег в $file"
+              else
+                  # Обновить существующий
+                  sed -i 's/<meta property="article:modified_time" content="[^"]*"/<meta property="article:modified_time" content="'"$MOSCOW_DATETIME"'"/g' "$file"
+                  echo "🔄 Обновлен meta-тег в $file"
+              fi
+              
+              # Добавить JavaScript скрипт если его нет
+              if ! grep -q "moscowTime.*toLocaleString" "$file"; then
+                  cat >> "$file" << 'SCRIPT_EOF'
+          
+          <script>
+          // Авто-обновление дат - Moscow Time
+          (function() {
+              const moscowTime = new Date().toLocaleString("en-US", {timeZone: "Europe/Moscow"});
+              const moscowDate = new Date(moscowTime).toISOString().split('T')[0];
+              const moscowDateTime = moscowDate + 'T01:00:00+03:00';
+              
+              let metaModified = document.querySelector('meta[property="article:modified_time"]');
+              if (!metaModified) {
+                  metaModified = document.createElement('meta');
+                  metaModified.setAttribute('property', 'article:modified_time');
+                  document.head.appendChild(metaModified);
+              }
+              metaModified.setAttribute('content', moscowDateTime);
+              
+              document.querySelectorAll('script[type="application/ld+json"]').forEach(script => {
+                  try {
+                      const data = JSON.parse(script.textContent);
+                      if (data.dateModified) data.dateModified = moscowDate;
+                      script.textContent = JSON.stringify(data, null, 2);
+                  } catch(e) {}
+              });
+          })();
+          </script>
+          SCRIPT_EOF
+                  echo "📜 Добавлен JavaScript в $file"
+              fi
+              
+              COUNT=$((COUNT + 1))
+          done
+          
+          echo "🎉 Обработано файлов: $COUNT"
+          EOF
+          
+          # Сделать исполняемым и запустить
+          chmod +x auto-inject-fix.sh
+          ./auto-inject-fix.sh
+          
+      - name: Update sitemap
+        run: |
+          MOSCOW_DATE=$(TZ=Europe/Moscow date +"%Y-%m-%d")
+          if [ -f "sitemap.xml" ]; then
+              sed -i 's/<lastmod>[^<]*<\/lastmod>/<lastmod>'"$MOSCOW_DATE"'<\/lastmod>/g' sitemap.xml
+              echo "✅ Sitemap обновлен"
+          fi
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Auto-Inject Bot"
+          git add -A
+          
+          if ! git diff --staged --quiet; then
+            MOSCOW_TIME=$(TZ=Europe/Moscow date +"%Y-%m-%d %H:%M MSK")
+            git commit -m "🤖 Успешная вставка скриптов дат: $MOSCOW_TIME"
+            git push
+            echo "✅ Изменения закоммичены и отправлены!"
+          else
+            echo "ℹ️ Нет изменений для коммита"
+          fi
